@@ -1,0 +1,86 @@
+body {
+  margin: 0 auto;
+}
+body .section {
+  text-align: center;
+}
+body h1 {
+  font-size: 40px;
+}
+body header {
+  background-image: url("../img/fondo.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .fp-tableCell {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+body header div.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 50px 200px;
+  opacity: 0.8;
+  border-radius: 50px;
+}
+body header div.contenedor img {
+  height: auto;
+}
+body header div.contenedor p {
+  color: #c96a97;
+  font-size: 20px;
+}
+body #section-2 .examples-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #section-2 .examples-container .image-container {
+  flex-grow: 1;
+}
+body #section-2 .examples-container .image-container:nth-of-type(1) {
+  margin-left: 300px;
+}
+body #section-2 .examples-container .image-container:nth-of-type(2) {
+  margin-right: 300px;
+}
+body #section-3 .fp-tableCell {
+  display: flex;
+  flex-wrap: wrap;
+}
+body #section-3 .fp-tableCell .caja {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+body #section-3 .fp-tableCell .caja:hover, body #section-3 .fp-tableCell .caja.show {
+  opacity: 1;
+}
+body #section-3 .fp-tableCell .caja .caja-interior {
+  height: 70%;
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.page-title {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+  padding: 4px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

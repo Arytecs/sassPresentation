@@ -1,0 +1,121 @@
+@import "./variables/colors";
+
+body {
+    margin: 0 auto;
+
+    .section {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    header {
+        background-image: url("../img/fondo.jpg");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .fp-tableCell {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+        }
+
+        div.contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+            padding: 50px 200px;
+            opacity: 0.8;
+            border-radius: 50px;
+
+            img {
+                height: auto;
+            }
+
+            p {
+                color: $pinksass;
+                font-size: 20px;
+            }
+        }
+
+
+    }
+
+    #section-2 {
+        .examples-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .image-container {
+                flex-grow: 1;
+
+                &:nth-of-type(1) {
+                    margin-left: 300px;
+                }
+
+                &:nth-of-type(2) {
+                    margin-right: 300px;
+                }
+            }
+        }
+    }
+
+    #section-3 {
+        .fp-tableCell {
+            display: flex;
+            flex-wrap: wrap;
+
+            .caja {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.8s;
+
+                &:hover,
+                &.show {
+                    opacity: 1;
+                }
+
+                .caja-interior {
+                    height: 70%;
+                    width: 70%;
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: black;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+@mixin large-text {
+    font: {
+        family: Arial;
+        size: 20px;
+        weight: bold;
+    }
+
+    color: #ff0000;
+}
+
+
+.page-title {
+    @include large-text;
+    padding: 4px;
+    margin-top: 10px;
+}
