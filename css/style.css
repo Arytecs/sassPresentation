@@ -1,6 +1,12 @@
+html {
+  font-size: 1px;
+}
+
 body {
   margin: 0 auto;
+  font-size: 20em;
   @import url("https://fonts.googleapis.com/css?family=Roboto:700");
+  /*GRACIAS*/
 }
 body .section {
   text-align: center;
@@ -35,6 +41,10 @@ body header div.contenedor img {
 }
 body header div.contenedor p {
   color: #c96a97;
+  font-size: 20px;
+}
+body #section-1 p,
+body #section-1 a {
   font-size: 20px;
 }
 body #section-2 .examples-container {
@@ -89,6 +99,9 @@ body #section-5 .image-container div {
 body #section-5 .image-container div:nth-of-type(1) img {
   width: 400px;
 }
+body #section-7 {
+  font-size: 12px;
+}
 body #section-7 .fp-tableCell {
   display: flex;
 }
@@ -118,8 +131,8 @@ body .container {
 body .cube,
 body .cube * {
   position: absolute;
-  width: 251px;
-  height: 251px;
+  width: 201px;
+  height: 201px;
 }
 body .sides {
   animation: rotate 3s ease infinite;
@@ -130,189 +143,293 @@ body .sides {
 body .cube .sides * {
   box-sizing: border-box;
   background-color: rgba(98, 228, 206, 0.5);
-  border: 25px solid white;
+  border: 20px solid white;
 }
 body .cube .sides .top {
   animation: top-animation 3s ease infinite;
   animation-delay: 0ms;
-  transform: rotateX(90deg) translateZ(250px);
+  transform: rotateX(90deg) translateZ(200px);
   animation-fill-mode: forwards;
   transform-origin: 50% 50%;
 }
 @keyframes top-animation {
   0% {
     opacity: 1;
-    transform: rotateX(90deg) translateZ(250px);
+    transform: rotateX(90deg) translateZ(200px);
   }
   20% {
     opacity: 1;
-    transform: rotateX(90deg) translateZ(125px);
+    transform: rotateX(90deg) translateZ(100px);
   }
   70% {
     opacity: 1;
-    transform: rotateX(90deg) translateZ(125px);
+    transform: rotateX(90deg) translateZ(100px);
   }
   90% {
     opacity: 1;
-    transform: rotateX(90deg) translateZ(250px);
+    transform: rotateX(90deg) translateZ(200px);
   }
   100% {
     opacity: 1;
-    transform: rotateX(90deg) translateZ(250px);
+    transform: rotateX(90deg) translateZ(200px);
   }
 }
 body .cube .sides .bottom {
   animation: bottom-animation 3s ease infinite;
   animation-delay: 0ms;
-  transform: rotateX(-90deg) translateZ(250px);
+  transform: rotateX(-90deg) translateZ(200px);
   animation-fill-mode: forwards;
   transform-origin: 50% 50%;
 }
 @keyframes bottom-animation {
   0% {
     opacity: 1;
-    transform: rotateX(-90deg) translateZ(250px);
+    transform: rotateX(-90deg) translateZ(200px);
   }
   20% {
     opacity: 1;
-    transform: rotateX(-90deg) translateZ(125px);
+    transform: rotateX(-90deg) translateZ(100px);
   }
   70% {
     opacity: 1;
-    transform: rotateX(-90deg) translateZ(125px);
+    transform: rotateX(-90deg) translateZ(100px);
   }
   90% {
     opacity: 1;
-    transform: rotateX(-90deg) translateZ(250px);
+    transform: rotateX(-90deg) translateZ(200px);
   }
   100% {
     opacity: 1;
-    transform: rotateX(-90deg) translateZ(250px);
+    transform: rotateX(-90deg) translateZ(200px);
   }
 }
 body .cube .sides .front {
   animation: front-animation 3s ease infinite;
   animation-delay: 100ms;
-  transform: rotateY(0deg) translateZ(250px);
+  transform: rotateY(0deg) translateZ(200px);
   animation-fill-mode: forwards;
   transform-origin: 50% 50%;
 }
 @keyframes front-animation {
   0% {
     opacity: 1;
-    transform: rotateY(0deg) translateZ(250px);
+    transform: rotateY(0deg) translateZ(200px);
   }
   20% {
     opacity: 1;
-    transform: rotateY(0deg) translateZ(125px);
+    transform: rotateY(0deg) translateZ(100px);
   }
   70% {
     opacity: 1;
-    transform: rotateY(0deg) translateZ(125px);
+    transform: rotateY(0deg) translateZ(100px);
   }
   90% {
     opacity: 1;
-    transform: rotateY(0deg) translateZ(250px);
+    transform: rotateY(0deg) translateZ(200px);
   }
   100% {
     opacity: 1;
-    transform: rotateY(0deg) translateZ(250px);
+    transform: rotateY(0deg) translateZ(200px);
   }
 }
 body .cube .sides .back {
   animation: back-animation 3s ease infinite;
   animation-delay: 100ms;
-  transform: rotateY(-180deg) translateZ(250px);
+  transform: rotateY(-180deg) translateZ(200px);
   animation-fill-mode: forwards;
   transform-origin: 50% 50%;
 }
 @keyframes back-animation {
   0% {
     opacity: 1;
-    transform: rotateY(-180deg) translateZ(250px);
+    transform: rotateY(-180deg) translateZ(200px);
   }
   20% {
     opacity: 1;
-    transform: rotateY(-180deg) translateZ(125px);
+    transform: rotateY(-180deg) translateZ(100px);
   }
   70% {
     opacity: 1;
-    transform: rotateY(-180deg) translateZ(125px);
+    transform: rotateY(-180deg) translateZ(100px);
   }
   90% {
     opacity: 1;
-    transform: rotateY(-180deg) translateZ(250px);
+    transform: rotateY(-180deg) translateZ(200px);
   }
   100% {
     opacity: 1;
-    transform: rotateY(-180deg) translateZ(250px);
+    transform: rotateY(-180deg) translateZ(200px);
   }
 }
 body .cube .sides .left {
   animation: left-animation 3s ease infinite;
   animation-delay: 100ms;
-  transform: rotateY(-90deg) translateZ(250px);
+  transform: rotateY(-90deg) translateZ(200px);
   animation-fill-mode: forwards;
   transform-origin: 50% 50%;
 }
 @keyframes left-animation {
   0% {
     opacity: 1;
-    transform: rotateY(-90deg) translateZ(250px);
+    transform: rotateY(-90deg) translateZ(200px);
   }
   20% {
     opacity: 1;
-    transform: rotateY(-90deg) translateZ(125px);
+    transform: rotateY(-90deg) translateZ(100px);
   }
   70% {
     opacity: 1;
-    transform: rotateY(-90deg) translateZ(125px);
+    transform: rotateY(-90deg) translateZ(100px);
   }
   90% {
     opacity: 1;
-    transform: rotateY(-90deg) translateZ(250px);
+    transform: rotateY(-90deg) translateZ(200px);
   }
   100% {
     opacity: 1;
-    transform: rotateY(-90deg) translateZ(250px);
+    transform: rotateY(-90deg) translateZ(200px);
   }
 }
 body .cube .sides .right {
   animation: right-animation 3s ease infinite;
   animation-delay: 100ms;
-  transform: rotateY(90deg) translateZ(250px);
+  transform: rotateY(90deg) translateZ(200px);
   animation-fill-mode: forwards;
   transform-origin: 50% 50%;
 }
 @keyframes right-animation {
   0% {
     opacity: 1;
-    transform: rotateY(90deg) translateZ(250px);
+    transform: rotateY(90deg) translateZ(200px);
   }
   20% {
     opacity: 1;
-    transform: rotateY(90deg) translateZ(125px);
+    transform: rotateY(90deg) translateZ(100px);
   }
   70% {
     opacity: 1;
-    transform: rotateY(90deg) translateZ(125px);
+    transform: rotateY(90deg) translateZ(100px);
   }
   90% {
     opacity: 1;
-    transform: rotateY(90deg) translateZ(250px);
+    transform: rotateY(90deg) translateZ(200px);
   }
   100% {
     opacity: 1;
-    transform: rotateY(90deg) translateZ(250px);
+    transform: rotateY(90deg) translateZ(200px);
   }
 }
 body .text {
-  margin-top: 750px;
+  margin-top: 600px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 24.5rem;
   width: 100%;
   font-weight: 600;
   text-align: center;
+}
+body #section-10 .fp-tableCell {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 30rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #section-10 .fp-tableCell .main {
+  position: relative;
+  display: flex;
+}
+body #section-10 .fp-tableCell .main h1 {
+  margin: 0;
+}
+body #section-10 .fp-tableCell .main .marker,
+body #section-10 .fp-tableCell .main .r,
+body #section-10 .fp-tableCell .main .e1,
+body #section-10 .fp-tableCell .main .s1,
+body #section-10 .fp-tableCell .main .s2,
+body #section-10 .fp-tableCell .main .e2 {
+  animation-timing-function: cubic-bezier(0.15, -0.01, 0.58, 1);
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+body #section-10 .fp-tableCell .main .marker {
+  position: absolute;
+  top: 4rem;
+  left: -3rem;
+  height: 3rem;
+  width: 40rem;
+  background-color: black;
+  animation-name: marker;
+}
+body #section-10 .fp-tableCell .main .r {
+  margin-left: 1rem;
+  animation-name: r;
+}
+body #section-10 .fp-tableCell .main .e1 {
+  margin-left: 7rem;
+  animation-name: e1;
+}
+body #section-10 .fp-tableCell .main .s1 {
+  margin-left: 16rem;
+  animation-name: s1;
+}
+body #section-10 .fp-tableCell .main .s2 {
+  margin-left: 21rem;
+  animation-name: s2;
+}
+body #section-10 .fp-tableCell .main .e2 {
+  margin: 0 36rem 0 42rem;
+  animation-name: e2;
+}
+@keyframes r {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  50%, 70% {
+    transform: translateX(35rem);
+  }
+}
+@keyframes e1 {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  50%, 70% {
+    transform: translateX(75rem);
+  }
+}
+@keyframes s1 {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  50%, 70% {
+    transform: translateX(81rem);
+  }
+}
+@keyframes s2 {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  50%, 70% {
+    transform: translateX(71rem);
+  }
+}
+@keyframes e2 {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  50%, 70% {
+    transform: translateX(34rem);
+  }
+}
+@keyframes marker {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  50%, 70% {
+    transform: translateX(337rem);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
