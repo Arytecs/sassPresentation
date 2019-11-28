@@ -44,32 +44,63 @@
         <secition id="section-3" class="section">
             <div class="caja">
                 <div class="caja-interior">
-                    <h3>CÓDIGO ANIDADO</h3>
+                    <h3>CÓDIGO ANIDADO SCSS</h3>
                     <img src="img/example-1-1.PNG" />
                 </div>
             </div>
             <div class="caja">
                 <div class="caja-interior">
-                    <h3>VARIABLES</h3>
+                    <h3>CÓDIGO ANIDADO CSS</h3>
+                    <img src="img/example-1-2.PNG" />
+                </div>
+            </div>
+            <div class="caja">
+                <div class="caja-interior">
+                    <h3>VARIABLES SCSS</h3>
                     <img src="img/variables.PNG" />
                 </div>
             </div>
             <div class="caja">
                 <div class="caja-interior">
-                    <h3>MIXINS</h3>
+                    <h3>VARIABLES CSS</h3>
+                    <h1>NO EXISTEN</h1>
+                    <img src="img/variables2.PNG" />
+                </div>
+            </div>
+
+        </secition>
+
+        <section id="section-4" class="section">
+            <div class="caja">
+                <div class="caja-interior">
+                    <h3>MIXINS SCSS</h3>
                     <img src="img/mixin1-1.PNG" />
                     <img src="img/mixin1-2.PNG" />
                 </div>
             </div>
             <div class="caja">
                 <div class="caja-interior">
-                    <h3>FUNCIONES</h3>
+                    <h3>MIXINS CSS</h3>
+                    <h1>NO EXISTEN</h1>
+                    <img src="img/mixin2-1.PNG" />
+                </div>
+            </div>
+            <div class="caja">
+                <div class="caja-interior">
+                    <h3>FUNCIONES SCSS</h3>
                     <img src="img/funciones.PNG" />
                 </div>
             </div>
-        </secition>
+            <div class="caja">
+                <div class="caja-interior">
+                    <h3>FUNCIONES CSS</h3>
+                    <h1>NO EXISTEN</h1>
+                    <img src="img/funciones2.PNG" />
+                </div>
+            </div>
+        </section>
 
-        <section id="section-4" class="section">
+        <section id="section-5" class="section">
             <h1>Instalación en entorno VS</h1>
             <a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler" target="_blank">Web
                 Compiler</a>
@@ -83,7 +114,7 @@
                 </div>
             </div>
         </section>
-        <section id="section-5" class="section">
+        <section id="section-6" class="section">
             <h1>EJEMPLOS</h1>
             <div class="container">
                 <div class="cube">
@@ -99,11 +130,133 @@
                 <div class="text">¿Qué os parece?</div>
             </div>
         </section>
-        <section id="section-6" class="section">
+        <section id="section-7" class="section" style="text-align: left;">
+            <div>
+                <pre>
+                <code>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+    $size: 250px;
 
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #FFD399;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotateX(-37.5deg) rotateY(45deg);
+        }
+
+        50% {
+            transform: rotateX(-37.5deg) rotateY(405deg);
+        }
+
+        100% {
+            transform: rotateX(-37.5deg) rotateY(405deg);
+        }
+    }
+
+    .cube,
+    .cube * {
+        position: absolute;
+        width: $size + 1;
+        height: $size + 1;
+    }
+    .sides {
+        animation: rotate 3s ease infinite;
+        animation-delay: .8s;
+        transform-style: preserve-3d;
+        transform: rotateX(-37.5deg) rotateY(45deg);
+    }
+                </code>
+              </pre>
+            </div>
+            <div>
+                <pre>
+                    <code>                    
+            .cube .sides * {
+                box-sizing: border-box;
+                background-color: rgba(98, 228, 206, 0.5);
+                border: $size / 10 solid white;
+            }
+
+            @mixin side($name, $rotate, $i) {
+                .#{$name} {
+                    animation: #{$name}-animation 3s ease infinite;
+                    animation-delay: $i * 100ms;
+                    transform: #{$rotate} translateZ($size);
+                    animation-fill-mode: forwards;
+                    transform-origin: 50% 50%;
+                }
+
+
+                @keyframes #{$name}-animation {
+                    0% {
+                        opacity: 1;
+                        transform: #{$rotate} translateZ($size)
+                    }
+
+                    20% {
+                        opacity: 1;
+                        transform: #{$rotate} translateZ($size / 2)
+                    }
+
+                    70% {
+                        opacity: 1;
+                        transform: #{$rotate} translateZ($size / 2)
+                    }
+
+                    90% {
+                        opacity: 1;
+                        transform: #{$rotate} translateZ($size)
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: #{$rotate} translateZ($size)
+                    }
+                }
+            }
+                    </code>
+                </pre>
+            </div>
+            <div>
+                <pre>
+                    <code>
+            .cube .sides {
+                @include side("top", rotateX(90deg), 0);
+                @include side("bottom", rotateX(-90deg), 0);
+                @include side("front", rotateY(0deg), 1);
+                @include side("back", rotateY(-180deg), 1);
+                @include side("left", rotateY(-90deg), 1);
+                @include side("right", rotateY(90deg), 1);
+            }
+                                
+            .text {
+                margin-top: $size * 3;
+                color: white;
+                font-size: 1.5rem;
+                width: 100%;
+                font-weight: 600;
+                text-align: center;
+            }
+                    </code>
+                </pre>
+            </div>
         </section>
-        <section id="section-7" class="section">
-
+        <section id="section-8" class="section">
+            <h1>CÓDIGO CSS</h1>
+            <h2>SASS --> 106 líneas</h2>
+            <h2>CSS --> 221 líneas</h2>
         </section>
     </div>
 </body>
