@@ -66,6 +66,11 @@ body #section-4 .fp-tableCell {
   display: flex;
   flex-wrap: wrap;
 }
+body #section-3 .fp-tableCell h1, body #section-3 .fp-tableCell h3,
+body #section-4 .fp-tableCell h1,
+body #section-4 .fp-tableCell h3 {
+  margin: 5px;
+}
 body #section-3 .fp-tableCell .caja,
 body #section-4 .fp-tableCell .caja {
   width: 50%;

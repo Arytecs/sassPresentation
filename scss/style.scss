@@ -81,6 +81,10 @@ body {
         .fp-tableCell {
             display: flex;
             flex-wrap: wrap;
+            
+            h1, h3{
+                margin: 5px;
+            }
 
             .caja {
                 width: 50%;
